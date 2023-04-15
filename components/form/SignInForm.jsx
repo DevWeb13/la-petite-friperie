@@ -30,9 +30,11 @@ const SignInForm = () => {
   });
 
   const onSubmit = (data) => {
+    console.log("ici");
     const { email, password } = data;
     try {
       // submit to next-auth
+      console.log(data);
     } catch (error) {
       setError({ message: error.message });
     }
@@ -80,10 +82,17 @@ const SignInForm = () => {
       <Button type="submit" variant="outlined" className="mt-10">
         Se Connecter
       </Button>
-      <Button type="submit" variant="outlined" color="info" className="mt-10">
-        S&apos;enregistrer
+      <Button
+        type="submit"
+        variant="outlined"
+        color="warning"
+        className="mt-10"
+      >
+        <Link href="/signUp" className="w-full h-full">
+          S&apos;enregistrer
+        </Link>
       </Button>
-      <Button variant="outlined" color="secondary" className="mt-10">
+      <Button variant="outlined" color="secondary" className="mt-1">
         <Link href="/" className="w-full h-full">
           Accueil
         </Link>
