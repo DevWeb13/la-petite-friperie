@@ -3,14 +3,15 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+const  Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-pink-900">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-pink-800">
 
 
-      <div className="border">
+      <div className="p-9  rounded-3xl shadow shadow-zinc-800 bg-pink-300 ">
+        tests
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          className="relative dark:invert"
           src="/Logo.svg"
           alt=" Logo"
           width={480}
@@ -23,3 +24,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home

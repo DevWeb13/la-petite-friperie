@@ -1,14 +1,13 @@
-import './globals.css'
+import '@/styles/globals.css'
+import Head from './head'
 
-export const metadata = {
-  title: 'La petite friperie',
-  description: 'Boutique solidaire de revente de vêtements de seconde main a prix réduit',
-}
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Head/>
+      <body >{children}</body>
     </html>
   )
 }
