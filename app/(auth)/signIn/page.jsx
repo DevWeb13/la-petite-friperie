@@ -1,14 +1,12 @@
-import SignInForm from '@/components/form/SignInForm';
-import React from 'react';
+import SignInForm from "@/components/form/SignInForm";
+import React from "react";
 
-const signIn
- = () => {
+const signIn = () => {
   return (
-    <main className='flex flex-col justify-center items-center bg-green-500 h-full'>
-      <SignInForm/>
+    <main className="flex flex-col justify-center items-center  h-full">
+      <SignInForm />
     </main>
   );
 };
 
-export default signIn
-;
+export default signIn;

@@ -40,7 +40,13 @@ const SignInForm = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-7">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-6 border p-10  rounded-xl"
+    >
+      <h1 className="w-full text-center text-2xl text-cyan-800 font-medium ">
+        Identifier vous
+      </h1>
       <Controller
         name="email"
         control={control}

@@ -23,7 +23,7 @@ const schema = object({
     .max(30, "Le mot de passe ne doit pas faire plus de 30 caractères"),
   confirmPassword: string()
     .required("Veuillez confirmer votre mot de passe")
-    .oneOf([ref("password"), null], "les motes de passe sont différents")
+    .oneOf([ref("password"), null], "les mots de passe sont différents")
     .trim(),
 }).required();
 
@@ -48,8 +48,20 @@ const SignInForm = () => {
       setError({ message: error.message });
     }
   };
+  const style = {
+    color: errors?.confirmPassword && "red",
+  };
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-7">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-7 border p-14 rounded-xl"
+    >
+      <h1
+        className="w-full text-center text-2xl text-cyan-600 font-semibold"
+        style={style}
+      >
+        Créer votre compte
+      </h1>
       <Controller
         name="name"
         control={control}
