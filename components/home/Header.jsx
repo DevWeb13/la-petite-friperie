@@ -7,6 +7,7 @@ import UserLoggedIn from "@/components/auth/UserLoggedIn";
 import { Button } from "@mui/material";
 
 const Header = () => {
+  //test branche Claire
   const [userLogged, setUserLogged] = useState(false);
   return (
     <header className="flex w-full h-24 justify-between items-center p-6 bg-red-300 relative">
