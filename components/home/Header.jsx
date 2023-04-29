@@ -24,7 +24,7 @@ const Header = () => {
         La Petite Friperie
       </h1>
       <nav className=" w-3/12 h-full flex items-center absolute right-3">
-        <ul className="flex w-full h-full  items-center justify-between">
+        <ul className="flex w-full h-full  items-center justify-end">
           {userLogged ? <UserLoggedIn /> : <UserLoggedOut />}
         </ul>
       </nav>
