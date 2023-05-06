@@ -38,12 +38,17 @@ const SignInForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    const { email, password } = data;
+  const onSubmit = async (data) => {
     console.log("ici");
     try {
       // submit to next-auth
-      console.log(data);
+      const obj = JSON.stringify(data);
+      let res = await fetch(`api/test`, {
+        method: "POST",
+        body: obj,
+      });
+      let user = await res.json();
+      console.log("user : ", user);
     } catch (error) {
       setError({ message: error.message });
     }
