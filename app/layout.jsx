@@ -7,9 +7,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head />
 
-      <body className="h-full">
+      <body className=" h-full">
         <Header />
-        {children}
+        <section>{children}</section>
       </body>
     </html>
   );

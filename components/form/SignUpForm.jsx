@@ -59,7 +59,7 @@ const SignInForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-7 border p-14 rounded-xl"
+      className="flex flex-col gap-7 border p-14 my-4 rounded-xl"
     >
       <h1
         className="w-full text-center text-2xl text-cyan-600 font-semibold"
