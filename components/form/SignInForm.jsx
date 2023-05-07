@@ -42,7 +42,7 @@ const SignInForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-6 border p-10 my-4  rounded-xl"
+      className="flex flex-col gap-6 border p-10 my-4  rounded-xl bg-cyan-100"
     >
       <h1 className="w-full text-center text-2xl text-cyan-800 font-medium ">
         Identifier vous

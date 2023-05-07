@@ -2,13 +2,15 @@ const { PrismaClient } = require("@prisma/client");
 
 export default async function handler(req, res) {
   const prisma = new PrismaClient();
-  const { name, email, password } = req.body;
+  const obj = await JSON.parse(req.body);
+
+  console.log(obj.name, "((((");
   // // use `prisma` in your application to read and write data in your DB
   const newUser = await prisma.user.create({
     data: {
-      name,
-      email,
-      password,
+      name: obj.name,
+      email: obj.email,
+      password: obj.password,
     },
   });
 

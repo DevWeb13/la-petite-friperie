@@ -40,10 +40,12 @@ const SignInForm = () => {
 
   const onSubmit = async (data) => {
     console.log("ici");
+    console.log(data);
     try {
       // submit to next-auth
       const obj = JSON.stringify(data);
-      let res = await fetch(`api/test`, {
+      console.log(obj, "-----");
+      let res = await fetch(`api/user/signup`, {
         method: "POST",
         body: obj,
       });
@@ -59,7 +61,7 @@ const SignInForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-7 border p-14 my-4 rounded-xl"
+      className="flex flex-col gap-7 border p-14 my-4 rounded-xl bg-cyan-100"
     >
       <h1
         className="w-full text-center text-2xl text-cyan-600 font-semibold"

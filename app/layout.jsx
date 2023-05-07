@@ -7,9 +7,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head />
 
-      <body className=" h-full">
+      <body
+        className="bg-green-300 h-full bg-[url('/test.jpg')] bg-no-repeat bg-cover
+      "
+      >
         <Header />
-        <section>{children}</section>
+
+        {children}
       </body>
     </html>
   );

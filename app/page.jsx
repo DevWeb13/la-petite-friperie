@@ -6,22 +6,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 const Home = () => {
   return (
-    <main className="flex  flex-col ">
-      <div style={{ width: "100%", height: "100%", border: "1px solid red" }}>
-        test
-        {/* <Image
-          src="/test.jpg"
-          width={1920}
-          height={1080}
-          style={{
-            width: "100%",
-            height: "100%",
-            top: 0,
-            left: 0,
-          }}
-          alt="Picture of the author"
-        /> */}
-      </div>
+    <main
+      className="flex  flex-col  "
+      style={{ height: "calc(100vh - 6rem)", width: "100vw" }}
+    >
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          border: "1px solid red",
+        }}
+      ></div>
     </main>
   );
 };
