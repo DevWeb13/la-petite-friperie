@@ -1,0 +1,91 @@
+openapi: 3.0.0
+info:
+  title: La Petite Friperie
+
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+    description: Local dev server
+  - url: https://la-petite-friperie.vercel.app/api
+    description: Prod server
+paths:
+  /user/login:
+    post:
+      tags:
+        - User Modules
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200": # status code
+          description: user logged in
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    format: bearer
+                  id:
+                    type: string
+                  firstname:
+                    type: string
+                  picture:
+                    type: string
+  /user/signup:
+    post:
+      tags:
+        - User Modules
+      summary: Create User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+                firstname:
+                  type: string
+                picture:  
+                  type : string
+
+      responses:
+        "200": # status code
+          description: Created user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    format: bearer
+                  id:
+                    type: string
+                  firstname:
+                    type: string
+                  picture:
+                    type: string
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    BearerAuth:
+      type: http
+      scheme: bearer
