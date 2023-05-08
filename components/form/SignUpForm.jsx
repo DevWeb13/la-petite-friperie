@@ -67,7 +67,7 @@ const SignInForm = () => {
         className="w-full text-center text-2xl text-cyan-600 font-semibold"
         style={style}
       >
-        Créer votre compte
+        Créez votre compte
       </h1>
       <Controller
         name="name"

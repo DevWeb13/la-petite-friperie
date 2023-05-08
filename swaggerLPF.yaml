@@ -58,10 +58,16 @@ paths:
                   type: string
                 password:
                   type: string
-                firstname:
+                name:
                   type: string
-                picture:  
-                  type : string
+                role:
+                  type: string
+                createdAt:
+                  type: string
+                updatedAt:
+                  type: string
+                picture:
+                  type: string
 
       responses:
         "200": # status code

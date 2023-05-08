@@ -29,12 +29,18 @@ const SignInForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log("ici");
     const { email, password } = data;
     try {
       // submit to next-auth
-      console.log(data);
+      const obj = JSON.stringify(data);
+      let res = await fetch(`api/user/login`, {
+        method: "POST",
+        body: obj,
+      });
+      let user = await res.json();
+      console.log("user : ", user);
     } catch (error) {
       setError({ message: error.message });
     }
@@ -45,7 +51,7 @@ const SignInForm = () => {
       className="flex flex-col gap-6 border p-10 my-4  rounded-xl bg-cyan-100"
     >
       <h1 className="w-full text-center text-2xl text-cyan-800 font-medium ">
-        Identifier vous
+        Identifiez vous
       </h1>
       <Controller
         name="email"
