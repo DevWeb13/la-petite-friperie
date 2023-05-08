@@ -9,15 +9,7 @@ const Home = () => {
     <main
       className="flex  flex-col  "
       style={{ height: "calc(100vh - 6rem)", width: "100vw" }}
-    >
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          border: "1px solid red",
-        }}
-      ></div>
-    </main>
+    ></main>
   );
 };
 
