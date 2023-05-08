@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
       <Head />
 
       <body
-        className="bg-green-300 h-full bg-[url('/test.jpg')] bg-no-repeat bg-cover
+        className="bg-green-300 h-full bg-[url('/illustration.svg')] bg-no-repeat bg-cover
       "
       >
         <Header />
